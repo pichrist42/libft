@@ -6,7 +6,7 @@
 /*   By: pichrist <pichrist@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/05 15:07:54 by pichrist          #+#    #+#             */
-/*   Updated: 2016/12/15 21:25:20 by pichrist         ###   ########.fr       */
+/*   Updated: 2017/01/30 02:14:03 by pichrist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 
 size_t	ft_strlen(const char *str)
 {
-	int i;
+	const char *c;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+	if (!str)
+		return (0);
+	c = str;
+	while (*c)
+		c++;
+	return (c - str);
 }

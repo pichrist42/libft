@@ -6,7 +6,7 @@
 /*   By: pichrist <pichrist@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/05 15:04:48 by pichrist          #+#    #+#             */
-/*   Updated: 2016/11/30 19:17:11 by pichrist         ###   ########.fr       */
+/*   Updated: 2017/01/30 01:45:05 by pichrist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,5 @@
 void	ft_putstr(char const *str)
 {
 	if (str)
-		while (*str)
-			ft_putchar(*str++);
+		write(1, str, ft_strlen(str));
 }
