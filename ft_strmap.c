@@ -6,7 +6,7 @@
 /*   By: pichrist <pichrist@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/29 17:32:38 by pichrist          #+#    #+#             */
-/*   Updated: 2017/01/09 21:02:47 by pichrist         ###   ########.fr       */
+/*   Updated: 2017/01/30 01:09:01 by pichrist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,16 @@ char		*ft_strmap(char const *s, char (*f)(char))
 {
 	char	*new;
 	size_t	i;
+	size_t	len;
 
 	new = NULL;
 	if (s && f)
 	{
-		if ((new = (char*)ft_memalloc(ft_strlen(s) + 1)) == NULL)
+		len = ft_strlen(s);
+		if ((new = (char*)ft_memalloc(len + 1)) == NULL)
 			return (NULL);
 		i = -1;
-		while (++i < ft_strlen(s))
+		while (++i < len)
 			new[i] = f(s[i]);
 	}
 	return (new);
