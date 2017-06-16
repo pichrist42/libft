@@ -163,6 +163,12 @@ int					ft_iterative_power(int n, int p);
 ** Recursive algorithm.
 */
 int					ft_power(int n, int p);
+
+/*
+** ft_strchrp looks for the string item contained in the string s and returns \
+** the position of the beginning of the first occurrence. If one or the other \
+** parameter is not defined, or the item string is not found, 0 is returned.
+*/
 int					ft_strchrp(char *s, char *item);
 
 /*
