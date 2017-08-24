@@ -23,7 +23,7 @@ char	*ft_strdupu(char *s, char *l)
 	if (l == NULL || ft_strlen(l) == 0)
 		return (ft_strdup(s));
 	p = ft_strchrp(s, l);
-	if (p == 0 || ((buffer = ft_strnew(p + 1)) == NULL))
+	if (p == -1 || ((buffer = ft_strnew(p + 1)) == NULL))
 		return (ft_strdup(s));
 	i = -1;
 	while (s[++i] && i < p)
