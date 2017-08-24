@@ -35,7 +35,7 @@ static int	ft_strchrp_do(char *s, char *item, size_t i, size_t j)
 			return (i - ft_strlen(item) + 1);
 		i++;
 	}
-	return (0);
+	return (-1);
 }
 
 int			ft_strchrp(char *s, char *item)
