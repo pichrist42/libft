@@ -41,6 +41,6 @@ static int	ft_strchrp_do(char *s, char *item, size_t i, size_t j)
 int			ft_strchrp(char *s, char *item)
 {
 	if (item == NULL || s == NULL)
-		return (0);
+		return (-1);
 	return (ft_strchrp_do(s, item, 0, 0));
 }
