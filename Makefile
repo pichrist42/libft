@@ -34,15 +34,15 @@ $(NAME):
 	@gcc -Wall -Werror -Wextra $(SRC) -c -I .
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
-	@echo "\033[1;37mObject files\t\033[1;32m[Created]"
-	@echo "\033[1;37mlibft.a\t\t\033[1;32m[Created]"
+	@echo "Object files\t\033[1;32m[Created]\033[0m"
+	@echo "libft.a\t\t\033[1;32m[Created]\033[0m"
 
 clean:
 	@rm -rf $(OBJ)
-	@echo "\033[1;37mObject files\t\033[1;34m[Removed]"
+	@echo "Object files\t\033[1;34m[Removed]\033[0m"
 
 fclean: clean
 	@rm -f libft.a
-	@echo "\033[1;37mlibft.a\t\t\033[1;34m[Removed]"
+	@echo "libft.a\t\t\033[1;34m[Removed]\033[0m"
 
 re: fclean all
